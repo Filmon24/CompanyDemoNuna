@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+/* Smooth scrolling for in-page links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent content from being hidden under the fixed navbar when using #hash links */
+section[id] {
+  scroll-margin-top: 5rem; /* ~80px navbar height */
+}
+
+/* Simple fade-in animation used by components */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Base typography adjustments and page theme */
+body {
+  font-size: 0.75rem;
+  background-color: #2f004f;
+  color: #ffffff;
+}
+
+/* Navigation tweaks */
+nav .nav-link {
+  font-size: 0.5rem;
+}
+
+/* Slide-up animation */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.7s ease-out forwards;
+}
+
+/* Scale-in animation */
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.6s ease-out forwards;
+}
+
+/* Optional: subtle hover for cards */
+.card-hover {
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+.card-hover:hover {
+  transform: translateY(-2px);
+}
